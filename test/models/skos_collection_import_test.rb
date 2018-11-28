@@ -20,13 +20,13 @@ class SkosCollectionImportTest < ActiveSupport::TestCase
   setup do
     Iqvoc::Concept.pref_labeling_class_name = 'Labeling::SKOS::PrefLabel'
 
-    Iqvoc.config.register_setting('languages.pref_labeling', ['de', 'en'])
-    Iqvoc.config.register_setting('languages.further_labelings.Labeling::SKOS::AltLabel', ['de', 'en'])
+    Iqvoc.config.register_setting('languages.pref_labeling', ['pt', 'en'])
+    Iqvoc.config.register_setting('languages.further_labelings.Labeling::SKOS::AltLabel', ['pt', 'en'])
   end
 
   teardown do
-    Iqvoc.config['languages.pref_labeling'] = ['en', 'de']
-    Iqvoc.config['languages.further_labelings.Labeling::SKOS::AltLabel'] = ['en', 'de']
+    Iqvoc.config['languages.pref_labeling'] = ['en', 'pt']
+    Iqvoc.config['languages.further_labelings.Labeling::SKOS::AltLabel'] = ['en', 'pt']
   end
 
   TEST_DATA = (<<-DATA

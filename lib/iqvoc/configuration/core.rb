@@ -134,9 +134,9 @@ module Iqvoc
         # initialize
         self.config.register_settings({
           'title' => 'iQvoc',
-          'languages.pref_labeling' => ['en', 'de'],
-          'languages.further_labelings.Labeling::SKOS::AltLabel' => ['en', 'de'],
-          'languages.notes' => ['en', 'de'],
+          'languages.pref_labeling' => ['pt', 'en'],
+          'languages.further_labelings.Labeling::SKOS::AltLabel' => ['pt', 'en'],
+          'languages.notes' => ['pt', 'en'],
           'performance.unbounded_hierarchy' => false,
           'sources.iqvoc' => ['']
         })
