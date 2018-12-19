@@ -133,7 +133,7 @@ module Iqvoc
 
         # initialize
         self.config.register_settings({
-          'title' => 'iQvoc',
+          'title' => 'Nomeclatura Brasileira de Serviços',
           'languages.pref_labeling' => ['pt', 'en'],
           'languages.further_labelings.Labeling::SKOS::AltLabel' => ['pt', 'en'],
           'languages.notes' => ['pt', 'en'],
