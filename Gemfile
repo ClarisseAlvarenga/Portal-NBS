@@ -43,6 +43,7 @@ gem 'delayed_job_active_record', '~> 4.1.1'
 gem 'carrierwave'
 gem 'autoprefixer-rails', '~> 6.5.1.1'
 gem 'daemons'
+gem 'jquery-rails'
 
 # database adapters
 # comment out those you do don't need or use a different Gemfile
