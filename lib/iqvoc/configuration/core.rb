@@ -40,17 +40,20 @@ module Iqvoc
           *.eof
         )
 
-        self.navigation_items = [{
-          text: 'Dashboard',
-          href: proc { dashboard_path },
-          controller: 'dashboard',
-          :authorized? => proc { can? :use, :dashboard }
-        }, {
-          text: 'Scheme',
-          href: proc { scheme_path },
-          controller: 'concepts/scheme',
-          :authorized? => proc { can? :read, Iqvoc::Concept.root_class.instance }
-        }, {
+        self.navigation_items = [
+        # {
+        #   text: 'Dashboard',
+        #   href: proc { dashboard_path },
+        #   controller: 'dashboard',
+        #   :authorized? => proc { can? :use, :dashboard }
+        # }, 
+        # {
+        #   text: 'Scheme',
+        #   href: proc { scheme_path },
+        #   controller: 'concepts/scheme',
+        #   :authorized? => proc { can? :read, Iqvoc::Concept.root_class.instance }
+        # }, 
+        {
           text: proc { ::Concept::Base.model_name.human(count: 2) },
           href: proc { hierarchical_concepts_path },
           controller: 'concepts/hierarchical',
@@ -58,29 +61,37 @@ module Iqvoc
             %w(concepts/hierarchical concepts/alphabetical concepts/untranslated).
                 include?(params[:controller])
           }
-        }, {
-          text: proc { t('txt.views.navigation.collections') },
-          href: proc { collections_path },
-          controller: 'collections'
-        }, {
+        }, 
+        # {
+        #   text: proc { t('txt.views.navigation.collections') },
+        #   href: proc { collections_path },
+        #   controller: 'collections'
+        # }, 
+        {
           text: proc { t('txt.views.navigation.search') },
           href: proc { search_path },
           controller: 'search_results'
-        }, {
-          text: proc { t('txt.views.navigation.help') },
-          items: [{
-            text: proc { t('txt.views.navigation.help') },
-            href: proc { help_path },
-            controller: 'pages',
-            action: 'help',
-            :authorized? => proc { can? :read, :help }
-          }, {
-            text: proc { t('txt.views.navigation.about') },
-            href: 'http://iqvoc.net/'
-          }, {
-            text: proc { t('txt.views.navigation.version') },
-            href: proc { version_path }
-          }]
+        },
+        {
+          text: proc { t('txt.views.navigation.about') },
+          href: proc { help_path },
+          controller: 'pages',
+          action: 'help',
+          :authorized? => proc { can? :read, :help }
+          # text: proc { t('txt.views.navigation.help') },
+          # items: [{
+          #   text: proc { t('txt.views.navigation.help') },
+          #   href: proc { help_path },
+          #   controller: 'pages',
+          #   action: 'help',
+          #   :authorized? => proc { can? :read, :help }
+          # }, {
+          #   text: proc { t('txt.views.navigation.about') },
+          #   href: 'http://iqvoc.net/'
+          # }, {
+          #   text: proc { t('txt.views.navigation.version') },
+          #   href: proc { version_path }
+          # }]
         }]
 
         self.searchable_class_names = {
