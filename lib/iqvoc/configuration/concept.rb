@@ -29,11 +29,11 @@ module Iqvoc
         self.alt_labeling_class_name      = 'Labeling::SKOS::AltLabel'
 
         self.note_class_names             = [
-          Iqvoc.change_note_class_name,
-          'Note::SKOS::Definition',
-          'Note::SKOS::EditorialNote',
-          'Note::SKOS::Example',
-          'Note::SKOS::HistoryNote',
+          # Iqvoc.change_note_class_name,
+          # 'Note::SKOS::Definition',
+          # 'Note::SKOS::EditorialNote',
+          # 'Note::SKOS::Example',
+          # 'Note::SKOS::HistoryNote',
           'Note::SKOS::ScopeNote'
         ]
 
@@ -46,12 +46,19 @@ module Iqvoc
         ]
 
         self.notation_class_names         = [
-          'Notation::Base'
+          # 'Notation::Base'
         ]
 
         self.additional_association_class_names = {}
 
-        self.view_sections = ['main', 'labels', 'relations', 'notes', 'notations', 'matches']
+        self.view_sections = [
+            'main', 
+            'labels', 
+            # 'relations', 
+            'notes', 
+            # 'notations', 
+            # 'matches'
+          ]
 
         self.include_module_names = []
       end

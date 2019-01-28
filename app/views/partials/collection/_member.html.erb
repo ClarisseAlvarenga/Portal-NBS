@@ -1,4 +1,6 @@
-<div class="relation panel" id="assigned_collections">
+<%
+=begin%>
+ <div class="relation panel" id="assigned_collections">
   <h2><%= klass.model_name.human(:count => 2) %></h2>
   <div class="relation-body">
     <%- if concept.collections.any? -%>
@@ -9,4 +11,6 @@
       </ul>
     <%- end -%>
   </div>
-</div>
+</div> 
+<%
+=end%>
