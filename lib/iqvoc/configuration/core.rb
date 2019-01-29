@@ -95,7 +95,7 @@ module Iqvoc
         }]
 
         self.searchable_class_names = {
-          'Labeling::SKOS::Base' => 'labels',
+          # 'Labeling::SKOS::Base' => 'labels',
           'Labeling::SKOS::PrefLabel' => 'pref_labels',
           'Note::Base' => 'notes'
         }
