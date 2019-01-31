@@ -54,7 +54,7 @@ module Iqvoc
         #   :authorized? => proc { can? :read, Iqvoc::Concept.root_class.instance }
         # }, 
         {
-          text: 'TODOS',
+          text: proc { ::Concept::Base.model_name.human(count: 2) },
           href: proc { hierarchical_concepts_path },
           controller: 'concepts/hierarchical',
           :active? => proc {
@@ -68,7 +68,7 @@ module Iqvoc
         #   controller: 'collections'
         # }, 
         {
-          text: 'NOTAS EXPLICATIVAS',
+          text: proc { t('txt.views.navigation.search') },
           href: proc { search_path },
           controller: 'search_results'
         },

@@ -19,6 +19,7 @@ services:
       - ./data:/iqvoc/data
       - ./app:/iqvoc/app
       - ./lib:/iqvoc/lib
+      - ./config/locales:/iqvoc/config/locales
     restart: always
     environment:
       PORT: 3000

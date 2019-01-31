@@ -22,7 +22,7 @@ pt:
         other: "Usuários"
       concept/base:
         one:   "Conceito"
-        other: "Conceitos"
+        other: "Árvore NBS"
       concept/relation/base:
         one:   "Relação"
         other: "Relações"
@@ -104,8 +104,8 @@ pt:
         one:   "Nota de histórico"
         other: "Notas de histórico"
       note/skos/scope_note:
-        one:   "Nota de escopo"
-        other: "Notas de escopo"
+        one:   "Nota Explicativa"
+        other: "Notas Explicativas"
       collection/base:
         one:   "Coleção"
         other: "Coleções"
