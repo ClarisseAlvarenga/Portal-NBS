@@ -68,7 +68,7 @@ module Iqvoc
         #   controller: 'collections'
         # }, 
         {
-          text: proc { t('txt.views.navigation.search') },
+          text: 'NOTAS EXPLICATIVAS',
           href: proc { search_path },
           controller: 'search_results'
         },
