@@ -160,7 +160,7 @@ pt:
        instance_configuration: "Configuração"
        hierarchical: "Hierárquico"
        alphabetical: "Alfabético"
-       search: "Notas explicativas"
+       search: "Busca"
        about: "Sobre"
        users: "Usuários"
        collections: "Coleções"

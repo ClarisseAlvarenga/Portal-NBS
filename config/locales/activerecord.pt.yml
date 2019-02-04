@@ -105,7 +105,7 @@ pt:
         other: "Notas de histórico"
       note/skos/scope_note:
         one:   "Nota Explicativa"
-        other: "Notas Explicativas"
+        other: "Busca"
       collection/base:
         one:   "Coleção"
         other: "Coleções"
