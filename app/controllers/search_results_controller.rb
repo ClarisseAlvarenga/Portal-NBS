@@ -33,6 +33,8 @@ class SearchResultsController < ApplicationController
   param :t, %w(labels pref_labels notes),
       required: true,
       desc: 'Specifies the properties to be searched.'
+  param :pref, String,
+      desc: 'Specifies the properties to be searched.'
   param :for, %w(concept collection all),
       desc: 'The result type you are searching for.'
   param 'l[]', Iqvoc.all_languages,
@@ -166,7 +168,13 @@ class SearchResultsController < ApplicationController
     controller.instance_variable_set(:@collections, collections)
 
     # default search params
-    controller.params['t'] = Iqvoc.searchable_class_names.values.first if controller.params['t'].nil?
+    if controller.params['pref']
+      # Redirect to new form, for example.
+      controller.params['t'] = Iqvoc.searchable_class_names.values.first
+    
+    else
+      controller.params['t'] = 'notes'
+    end
     controller.params['qt'] = 'contains' if controller.params['qt'].nil?
     controller.params['for'] = 'all' if controller.params['for'].nil?
     controller.params['l'] = langs.keys if controller.params['l'].nil?

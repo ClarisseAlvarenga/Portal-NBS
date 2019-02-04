@@ -1,4 +1,6 @@
-<div class="form-group">
+<%
+=begin%>
+ <div class="form-group">
   <%= label_tag 't', t('txt.views.search_results.for'), :class => 'col-sm-2 control-label' %>
   <div class="col-sm-3">
     <select name="t" id="t" class="search_type form-control">
@@ -7,4 +9,29 @@
         }, params[:t]) %>
     </select>
   </div>
-</div>
+</div> 
+<%
+=end%>
+
+<%
+=begin%>
+ <div class="form-group result_type_filter">
+  <%= label_tag nil, t('txt.views.search_results.for'), :class => 'col-sm-2 control-label' %>
+  <div class="col-sm-4">
+    <div class="radio-inline">
+      <label for="for_concept">
+        <%= radio_button_tag 't', 'pref_labels', params[:t] == "pref_labels" %> Nomeclatura
+      </label>
+    </div>
+
+    <div class="radio-inline">
+      <label for="for_concept">
+        <%= radio_button_tag 't', 'notes', params[:t] == "notes" %> Notas Explicativas
+      </label>
+    </div>
+  </div>
+</div> 
+<%
+=end%>
+
+<div></div>
