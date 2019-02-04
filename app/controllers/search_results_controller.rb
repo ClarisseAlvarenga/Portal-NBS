@@ -170,10 +170,9 @@ class SearchResultsController < ApplicationController
     # default search params
     if controller.params['pref']
       # Redirect to new form, for example.
-      controller.params['t'] = Iqvoc.searchable_class_names.values.first
-    
-    else
       controller.params['t'] = 'notes'
+    else
+      controller.params['t'] = Iqvoc.searchable_class_names.values.first
     end
     controller.params['qt'] = 'contains' if controller.params['qt'].nil?
     controller.params['for'] = 'all' if controller.params['for'].nil?
