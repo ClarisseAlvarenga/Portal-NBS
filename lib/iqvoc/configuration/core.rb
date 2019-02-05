@@ -53,15 +53,15 @@ module Iqvoc
         #   controller: 'concepts/scheme',
         #   :authorized? => proc { can? :read, Iqvoc::Concept.root_class.instance }
         # }, 
-        {
-          text: proc { ::Concept::Base.model_name.human(count: 2) },
-          href: proc { hierarchical_concepts_path },
-          controller: 'concepts/hierarchical',
-          :active? => proc {
-            %w(concepts/hierarchical concepts/alphabetical concepts/untranslated).
-                include?(params[:controller])
-          }
-        }, 
+        # {
+        #   text: proc { ::Concept::Base.model_name.human(count: 2) },
+        #   href: proc { hierarchical_concepts_path },
+        #   controller: 'concepts/hierarchical',
+        #   :active? => proc {
+        #     %w(concepts/hierarchical concepts/alphabetical concepts/untranslated).
+        #         include?(params[:controller])
+        #   }
+        # }, 
         # {
         #   text: proc { t('txt.views.navigation.collections') },
         #   href: proc { collections_path },

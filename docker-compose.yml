@@ -20,6 +20,7 @@ services:
       - ./app:/iqvoc/app
       - ./lib:/iqvoc/lib
       - ./config/locales:/iqvoc/config/locales
+      - ./config/routes.rb:/iqvoc/config/routes.rb
     restart: always
     environment:
       PORT: 3000
