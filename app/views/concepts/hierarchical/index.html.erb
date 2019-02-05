@@ -1,6 +1,16 @@
-<%= page_header :title => Iqvoc::Concept.base_class.model_name.human(:count => 2),
-  :desc => t('txt.views.navigation.hierarchical') %>
-<%= render 'concepts/sidebars/plural' %>
+<%
+=begin%>
+ <%= page_header :title => Iqvoc::Concept.base_class.model_name.human(:count => 2),
+  :desc => t('txt.views.navigation.hierarchical') %> 
+<%
+=end%>
+
+<div class="onebox"></div>
+<%
+=begin%>
+ <%= render 'concepts/sidebars/plural' %> 
+<%
+=end%>
 
 <% if params[:published] == '0' %>
   <%= treeview @concepts, false, true %>
