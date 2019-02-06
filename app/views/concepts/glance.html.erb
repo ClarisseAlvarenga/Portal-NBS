@@ -7,6 +7,7 @@
         <span class="sr-only"><%= t('txt.views.concepts.teaser.close') %></span>
       </button>
       <h1 class="modal-title" id="concept-teaser-title"><%= @concept.pref_label %></h1>
+      <p><%= @concept.notes.first %></p>
     </div>
     <div class="modal-body concept-teaser-body">
       <% if @view.no_content? %>
