@@ -256,7 +256,7 @@ function Treeview(container) {
 
       $.get(target, function(data) {
         modal.html(data);
-        modal.modal();
+        // modal.modal();
       });
     });
 

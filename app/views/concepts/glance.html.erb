@@ -7,8 +7,11 @@
         <span class="sr-only"><%= t('txt.views.concepts.teaser.close') %></span>
       </button>
       <h1 class="modal-title" id="concept-teaser-title"><%= @concept.pref_label %></h1>
-      <p><%= @concept.notes.first %></p>
+      <br><br>
+      <h2 class="modal-title"> Nota Expicativa</h2>
+      <p style="word-break: unset; white-space:pre-wrap"><%= @concept.notes.first %></p>
     </div>
+
     <div class="modal-body concept-teaser-body">
       <% if @view.no_content? %>
       <div class="alert alert-warning" role="alert">
