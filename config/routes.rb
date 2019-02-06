@@ -67,7 +67,8 @@ Rails.application.routes.draw do
 
     get 'alphabetical_concepts(/:prefix)' => 'concepts/alphabetical#index', as: 'alphabetical_concepts'
     get 'untranslated_concepts/:prefix'   => 'concepts/untranslated#index', as: 'untranslated_concepts'
-    get 'hierarchical_concepts' => 'concepts/hierarchical#index', as: 'hierarchical_concepts'
+    # get 'hierarchical_concepts' => 'concepts/hierarchical#index', as: 'hierarchical_concepts'
+    get '/' => 'concepts/hierarchical#index', as: 'hierarchical_concepts'
     get 'expired_concepts' => 'concepts/expired#index', as: 'expired_concepts'
 
     get 'dashboard' => 'dashboard#concept_index', as: 'dashboard'
@@ -102,5 +103,6 @@ Rails.application.routes.draw do
 
   get ':id' => 'rdf#show', as: 'rdf'
 
-  root to: 'frontpage#index', format: nil
+  # root to: 'frontpage#index', format: nil
+  root to: 'concepts/hierarchical#index', format: nil
 end
