@@ -66,10 +66,10 @@ function Treeview(container) {
           link.addClass('published');
         }
 
-        if (link[0]) {
-          var teaserLink = buildTeaserLink(node, link[0]);
-          $li.find('.jqtree-element').append(teaserLink);
-        }
+        // if (link[0]) {
+        //   var teaserLink = buildTeaserLink(node, link[0]);
+        //   $li.find('.jqtree-element').append(teaserLink);
+        // }
 
         if (dragabbleSupport) {
           // mark locked items
@@ -233,6 +233,18 @@ function Treeview(container) {
     link.attr('href', url)
         .addClass('tree-element-link')
         .html(label);
+
+    link.click(function(ev) {
+      ev.preventDefault();
+
+      var modal = $("#concept-teaser-modal");
+      var target = $(this).attr("href");
+
+      $.get(target, function(data) {
+        modal.html(data);
+        // modal.modal();
+      });
+    });
 
     return link;
   }

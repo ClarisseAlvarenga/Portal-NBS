@@ -27,9 +27,9 @@
         data-locked="<%= locked %>"
         data-glance-url="<%= glance_concept_url(concept) %>">
         <% if concept.published? %>
-          <%= link_to(concept.pref_label.to_s, concept_url(id: concept)) %>
+          <%= link_to(concept.pref_label.to_s, glance_concept_url(id: concept)) %>
         <% else %>
-          <%= link_to(concept.pref_label.to_s, concept_url(id: concept, published: 0)) %>
+          <%= link_to(concept.pref_label.to_s, glance_concept_url(id: concept, published: 0)) %>
         <% end %>
 
         <% if concept.additional_info.present? %>
