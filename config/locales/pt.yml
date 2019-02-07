@@ -113,6 +113,7 @@ pt:
        pref_label: "PrefLabel"
        close_match: "CloseMatch"
        classifiers: "Classes de ambiente"
+       to_concept: "Veja Mais"
      labels:
        new: "Novo rótulo"
        template_form: "Forma literal"
