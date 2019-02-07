@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal-dialog concept-teaser-dialog">
+<div class="modal-dialog concept-teaser-dialog" style="margin-top: 0px">
   <div class="modal-content concept-teaser-content">
     <div class="modal-header concept-teaser-header">
       <button type="button" class="close" data-dismiss="modal">
@@ -8,9 +8,23 @@
       </button>
       <h1 class="modal-title" id="concept-teaser-title"><%= @concept.pref_label %></h1>
       <br><br>
-      <h2 class="modal-title"> Nota Expicativa</h2>
-      <p style="word-break: unset; white-space:pre-wrap"><%= @concept.notes.first %></p>
-    </div>
+      <% if @view.alt_labels.any? %>
+      <div>
+        <h2><%= Iqvoc::Concept.alt_labeling_class.model_name.human(count: 2) %></h2>
+        <ul class="label-list">
+          <% @view.alt_labels.each do |l| %><!--
+          --><li class="label-list-item">
+               <span class="label-list-item-value"><%= l.value %></span>
+             </li><!--
+          --><% end %>
+      <br>
+      <br>      
+      <h2 class="modal-title"> Nota Explicativa</h2>
+      <div class="modal-body concept-teaser-body">
+          <br>
+          <p style="word-break: unset; white-space:pre-wrap"><%= @concept.notes.first %></p>
+      </div>
+      </div>
 
     <div class="modal-body concept-teaser-body">
       <% if @view.no_content? %>
@@ -24,15 +38,6 @@
         <p><%= @view.definition %></p>
       </div>
       <% end %>
-      <% if @view.alt_labels.any? %>
-      <div>
-        <h2><%= Iqvoc::Concept.alt_labeling_class.model_name.human(count: 2) %></h2>
-        <ul class="label-list">
-          <% @view.alt_labels.each do |l| %><!--
-          --><li class="label-list-item">
-               <span class="label-list-item-value"><%= l.value %></span>
-             </li><!--
-          --><% end %>
         </ul>
       </div>
       <% end %>

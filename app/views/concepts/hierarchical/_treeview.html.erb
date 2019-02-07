@@ -1,5 +1,5 @@
 
-<div style="flex-direction: row">
+<div class="row" style="display: flex">
   <div class="column">
   <% hcpath = hierarchical_concepts_path(:format => :json, :published => params[:published], :broader => broader || nil) unless hcpath %>
   <% if dragabble %>
@@ -39,7 +39,7 @@
     <% end %>
   </ul>
   </div>
-  <div class="column">
+  <div class="column" style="margin-left: 30px">
     <%= render 'layouts/modals' %>
   </div>
 </div>
