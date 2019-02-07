@@ -48,7 +48,7 @@ function Treeview(container) {
         return uri.normalize().toString();
       },
       onCreateLi: function(node, $li) {
-        var link = buildLink(node.url, node.name);
+        var link = buildLink(node.glance_url, node.name);
         $li.find('.jqtree-title').replaceWith(link);
 
         // add aditional info if present (e.g. for collections)
