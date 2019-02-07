@@ -109,7 +109,7 @@ pt:
        expired_at: "Expirado em %{date}"
        select: "Por favor selecione um dos %{concept_class_name} listados abaixo."
        new: "Novo %{concept_class_name}"
-       alt_label: "Rótulo Alternativo"
+       alt_label: "Código NBS"
        pref_label: "PrefLabel"
        close_match: "CloseMatch"
        classifiers: "Classes de ambiente"

@@ -56,8 +56,8 @@ pt:
         one:   "Rótulo preferencial"
         other: "Rótulos preferenciais"
       labeling/skos/alt_label:
-        one:   "Rótulo alternativo"
-        other: "Rótulos alternativos"
+        one:   "Código NBS"
+        other: "Código NBS"
       match/base:
         one:   "Correspondência"
         other: "Correspondências"
