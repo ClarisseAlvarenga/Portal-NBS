@@ -14,12 +14,15 @@
              </li><!--
           --><% end %>
       <br>
-      <br>      
-      <h2 class="modal-title"> Nota Explicativa</h2>
-      <div class="modal-body concept-teaser-body">
-          <br>
-          <p style="word-break: unset; white-space:pre-wrap"><%= @concept.notes.first %></p>
-      </div>
+      <br>
+      <% if @concept.notes.first %>
+        <h2 class="modal-title"> Nota Explicativa</h2>
+        <div class="modal-body concept-teaser-body">
+            <br>
+            <p style="word-break: unset; white-space:pre-wrap"><%= @concept.notes.first %></p>
+        </div>
+      <% end %>
+
       </div>
 
     <div class="modal-body concept-teaser-body">
