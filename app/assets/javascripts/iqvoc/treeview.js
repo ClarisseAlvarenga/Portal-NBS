@@ -227,6 +227,8 @@ function Treeview(container) {
     $tree.tree('updateNode', node, {moved: false});
   }
 
+  var selectedLink;
+
   function buildLink(url, label) {
     var link = $('<a/>')
 
@@ -236,6 +238,12 @@ function Treeview(container) {
 
     link.click(function(ev) {
       ev.preventDefault();
+
+      this.style.color = "red";
+      if (selectedLink && this != selectedLink) {
+        selectedLink.style.color = "#337ab7";
+      }
+      selectedLink = this;
 
       var modal = $("#concept-teaser-modal");
       var target = $(this).attr("href");
