@@ -52,9 +52,15 @@ module ConceptsHelper
 
     render_concept_association(res, concept, Collection::Member::Base)
 
+    contador = false
+
     Iqvoc::Concept.labeling_classes.each do |labeling_class, languages|
-      render_concept_association(res, concept, labeling_class, available_languages: languages || Iqvoc.available_languages)
+      if contador
+        render_concept_association(res, concept, labeling_class, available_languages: languages || Iqvoc.available_languages)
+      end
+      contador = true
     end
+
 
     Iqvoc::Concept.relation_classes.each do |relation_class|
       render_concept_association(res, concept, relation_class)
