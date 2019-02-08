@@ -1,7 +1,5 @@
 <% unless note.new_record? %>
   <div class="translation" lang="<%= note.language %>">
-    <span class="language_flap"><%= note.language %></span>
-    <div class="note_content">
       <% if note.value %>
         <p style="word-break: unset; white-space:pre-wrap"><%= auto_link(note.value, :html => { :target => '_blank' }) %></p>
       <% end %>
@@ -14,6 +12,5 @@
           <% end %>
         </dl>
       <% end %>
-    </div><!-- /.note_content -->
   </div><!-- /.translation -->
 <% end %>

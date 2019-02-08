@@ -31,13 +31,13 @@ pt:
         other: "Relações"
       concept/relation/skos/broader/mono:
         one:   "Termo geral"
-        other: "Termos gerais"
+        other: "Conceitos gerais"
       concept/relation/skos/broader/poly:
         one:   "Termo geral"
-        other: "Termos gerais"
+        other: "Conceitos gerais"
       concept/relation/skos/narrower/base:
         one:   "Termo específico"
-        other: "Termos específicos"
+        other: "Conceitos específicos"
       concept/relation/skos/related:
         one:   "Termo relacionado"
         other: "Termos relacionados"
@@ -105,7 +105,7 @@ pt:
         other: "Notas de histórico"
       note/skos/scope_note:
         one:   "Nota Explicativa"
-        other: "Busca"
+        other: "Nota Explicativa"
       collection/base:
         one:   "Coleção"
         other: "Coleções"

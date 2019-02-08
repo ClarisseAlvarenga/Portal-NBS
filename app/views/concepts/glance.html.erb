@@ -2,8 +2,8 @@
 <div class="modal-dialog concept-teaser-dialog" style="margin-top: 0px">
   <div class="modal-content concept-teaser-content">
     <div class="modal-header concept-teaser-header">
-      <h1 class="modal-title" id="concept-teaser-title"><%= @concept.pref_label %></h1>
-      <br><br>
+      <h1 class="modal-title" id="concept-teaser-title" style="font-weight: bold"><%= @concept.pref_label %></h1>
+      <br>
       <% if @view.alt_labels.any? %>
       <div>
         <h2><%= Iqvoc::Concept.alt_labeling_class.model_name.human(count: 2) %></h2>
