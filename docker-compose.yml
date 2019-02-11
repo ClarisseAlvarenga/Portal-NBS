@@ -19,9 +19,11 @@ services:
       - ./data:/iqvoc/data
       - ./app:/iqvoc/app
       - ./lib:/iqvoc/lib
+      - ./entrypoint.sh:/iqvoc/entrypoint.sh
       - ./config/locales:/iqvoc/config/locales
       - ./config/routes.rb:/iqvoc/config/routes.rb
     restart: always
+    entrypoint: ["/bin/bash", "/iqvoc/entrypoint.sh"]
     environment:
       PORT: 3000
       DB_HOST: db
