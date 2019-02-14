@@ -1,0 +1,41 @@
+.icon-bar {
+    float: right;
+  }
+  
+  .icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 5px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 15px;
+    display: inline;
+    border-radius: 7px;
+    
+  }
+  
+  .icon-bar a:hover {
+    background-color: #000;
+  }
+  
+  
+  .twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  
+  .linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  
+  .email {
+    background: #607D8B;
+    color: #000;
+  }
+  
+  .copy {
+    background: #8BC34A;
+    color: black;
+  }

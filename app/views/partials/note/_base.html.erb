@@ -6,7 +6,14 @@
                 label
               end %>
   <% notes = object.notes_for_class(klass) %>
-  <h2><%= klass.model_name.human(:count => notes.count) %></h2>
+  <h2><%= klass.model_name.human(:count => notes.count) %>
+    <div class="icon-bar">
+      <a href="#" class="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+      <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
+      <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+      <a href="#" class="copy"><i class="fa fa-link" aria-hidden="true"></i></a>
+    </div>
+  </h2>
   <div class="relation-body">
     <%= render :partial => 'partials/note/note', :collection => notes %>
   </div>
