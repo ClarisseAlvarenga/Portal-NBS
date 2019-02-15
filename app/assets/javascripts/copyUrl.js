@@ -1,4 +1,4 @@
-function copyToClipboard() {
+function copyUrlToClipboard() {
 
   // Create a "hidden" input
   var aux = document.createElement("input");
