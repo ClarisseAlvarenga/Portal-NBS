@@ -15,6 +15,7 @@
 <%= yield :head %>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+<%= javascript_include_tag "manifest" %>
 
 <% if @datasets %> <%# XXX: special-casing matches federation %>
 <body data-datasets="<%= @datasets %>"
@@ -43,7 +44,7 @@
     <% end %>
   </div>
 </div>
-<%= javascript_include_tag "manifest" %>
 <%= yield :scripts %>
+
 </body>
 </html>

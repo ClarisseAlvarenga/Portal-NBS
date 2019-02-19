@@ -19,7 +19,7 @@
         <h2 class="modal-title"> Nota Explicativa</h2>
         <div class="modal-body concept-teaser-body">
             <br>
-            <p style="word-break: unset; white-space:pre-wrap"><%= @concept.notes.first %></p>
+            <p id="notaExplicativa" style="word-break: unset; white-space:pre-wrap"><%= @concept.notes.first %></p>
         </div>
       <% end %>
 
@@ -66,4 +66,9 @@
     </div>
   </div>
 </div>
+<script type="text/javascript">
+  $( document ).ready(function() {
+    insereNbsLinks(document.getElementById("notaExplicativa"));
+  });
+</script>
 <!-- / Modal -->
