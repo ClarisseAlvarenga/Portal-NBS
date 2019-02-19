@@ -10,3 +10,5 @@
 //= require iqvoc/treeview
 //= require iqvoc/autocomplete
 //= require iqvoc/moving_sidebar
+//= require iqvoc/nbs_linker
+

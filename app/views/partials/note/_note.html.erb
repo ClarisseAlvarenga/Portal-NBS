@@ -1,7 +1,7 @@
 <% unless note.new_record? %>
   <div class="translation" lang="<%= note.language %>">
       <% if note.value %>
-        <p style="word-break: unset; white-space:pre-wrap"><%= auto_link(note.value, :html => { :target => '_blank' }) %></p>
+        <p id="notaExplicativa" style="word-break: unset; white-space:pre-wrap"><%= auto_link(note.value, :html => { :target => '_blank' }) %></p>
       <% end %>
 
       <% if note.annotations.any? %>
@@ -14,3 +14,4 @@
       <% end %>
   </div><!-- /.translation -->
 <% end %>
+
