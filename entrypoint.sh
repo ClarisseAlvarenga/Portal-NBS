@@ -5,6 +5,7 @@ if [ -f "$file" ]
 then
 	echo "$file found."
 else
+    rake db:migrate
     rake iqvoc:import:url URL=data/NBS2-skos.nt NAMESPACE='http://vocab.mdic.gov.br/NBS/v2.0/'
     echo "Banco Populado" > populado.txt
 fi
