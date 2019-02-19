@@ -18,4 +18,14 @@ function copyUrlToClipboard() {
   // Remove it from the body
   document.body.removeChild(aux);
 
+  fadePopUp();
+
+}
+
+function fadePopUp() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+  //setTimeout(function(){ 
+  //    popup.classList.toggle("hidden"); 
+  //  }, 3000);
 }
