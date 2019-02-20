@@ -365,7 +365,7 @@ pt:
        version_error: "Nova versão de Rótulo já existe."
        value_error: "Forma literal precisa ser fornecida."
      concept:
-       uri: "URI do conceito"
+       uri: "URI do Serviço"
        origin_error: "Origem inválida."
        version_error: "Nova versão de Rótulo já existe: %{origin}"
        no_pref_label_error: "No mínimo um Rótulo preferencial precisa ser especificado."
