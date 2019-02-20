@@ -8,9 +8,9 @@
   <% notes = object.notes_for_class(klass) %>
   <h2><%= klass.model_name.human(:count => notes.count) %>
     <div class="icon-bar">
-      <a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://simplesharebuttons.com" class="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
-      <a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a> 
-      <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a>
+      <a id="share_email" class="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+      <a id="share_twitter" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a> 
+      <a id="share_linkedin" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a>
       <a onclick="copyUrlToClipboard()" class="copy popup"><span class="popuptext" id="myPopup">Link Copiado!</span><i class="fa fa-link" aria-hidden="true"></i></a>
     </div>
   </h2>
@@ -18,3 +18,4 @@
     <%= render :partial => 'partials/note/note', :collection => notes %>
   </div>
 </div>
+
