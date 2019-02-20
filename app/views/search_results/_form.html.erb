@@ -5,7 +5,13 @@
 
   <hr />
   <div class="well">
-    <%= submit_tag 'Buscar nos Titulos', :class => 'btn btn-primary' %>
-    <%= submit_tag 'Buscar nas Notas Explicativas', name: 'pref', :class => 'btn btn-primary' %>
+    <%= submit_tag 'Buscar nos Titulos', :onclick => "shareResultsGenerator();", :class => 'btn btn-primary' %>
+    <%= submit_tag 'Buscar nas Notas Explicativas', :onclick => "shareResultsGenerator();", name: 'pref', :class => 'btn btn-primary' %>
+    <div class="icon-bar">
+      <a id="share_email_results" class="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+      <a id="share_twitter_results" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a> 
+      <a id="share_linkedin_results" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a>
+      <a onclick="copyUrlToClipboard()" class="copy popup"><span class="popuptext" id="myPopup">Link Copiado!</span><i class="fa fa-link" aria-hidden="true"></i></a>
+    </div>
   </div>
 <% end %>

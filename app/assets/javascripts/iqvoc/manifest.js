@@ -12,5 +12,6 @@
 //= require iqvoc/moving_sidebar
 //= require iqvoc/nbs_linker
 //= require iqvoc/share_message_generator
+//= require iqvoc/share_results_generator
 //= require iqvoc/iconSearch
 
