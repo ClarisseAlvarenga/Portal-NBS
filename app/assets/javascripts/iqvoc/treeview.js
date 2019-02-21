@@ -251,6 +251,12 @@ function Treeview(container) {
       $.get(target, function(data) {
         modal.html(data);
         // modal.modal();
+
+        var glanceTopPosition = jQuery('.onebox').offset().top + 100;
+	
+        // Scroll down to 'concept-teaser-title'
+        jQuery('html, body').animate({scrollTop:glanceTopPosition}, 'slow');
+
       });
     });
 
