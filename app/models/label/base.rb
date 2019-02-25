@@ -14,6 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+require "i18n"
+
 class Label::Base < ActiveRecord::Base
   self.table_name = 'labels'
 
@@ -63,7 +65,7 @@ class Label::Base < ActiveRecord::Base
   end
 
   def self.by_query_value(query)
-    where(["LOWER(#{table_name}.value) LIKE ?", query.mb_chars.downcase.to_s])
+    where(["unaccent(LOWER(#{table_name}.value)) LIKE ?", I18n.transliterate(query.mb_chars.downcase.to_s)])
   end
 
   # Attention: This means that even label classes without version controll will also

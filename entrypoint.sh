@@ -10,4 +10,9 @@ else
     echo "Banco Populado" > populado.txt
 fi
 
-rake assets:precompile && bundle exec rake db:migrate && bundle exec rake db:seed && bin/delayed_job start && exec bundle exec passenger start --port 3000 --environment $RAILS_ENV
+rake assets:precompile
+bundle exec rake db:migrate
+bundle exec rake db:seed
+bin/delayed_job start
+export PGPASSWORD='iqvoc' && psql -h db -p 5432 -U iqvoc iqvoc_production -c 'CREATE EXTENSION unaccent;'
+exec bundle exec passenger start --port 3000 --environment $RAILS_ENV
