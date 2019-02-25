@@ -10,7 +10,7 @@ services:
       POSTGRES_USER: iqvoc
       POSTGRES_PASSWORD: iqvoc
   web:
-    image: innoq/iqvoc_postgresql
+    build: .
     ports:
       - "3000:3000"
     volumes:
