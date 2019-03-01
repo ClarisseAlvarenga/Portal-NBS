@@ -47,7 +47,7 @@ class CreateSchema < ActiveRecord::Migration
 
     create_table 'concepts', force: true do |t|
       t.string   'type'
-      t.string   'origin', limit: 4000
+      t.string   'origin' 
       t.integer  'rev',                               default: 1
       t.date     'published_at'
       t.integer  'published_version_id'
@@ -87,7 +87,7 @@ class CreateSchema < ActiveRecord::Migration
 
     create_table 'labels', force: true do |t|
       t.string   'type'
-      t.string   'origin', limit: 4000
+      t.string   'origin' 
       t.string   'language'
       t.string   'value',                limit: 1024
       t.integer  'rev',                  default: 1

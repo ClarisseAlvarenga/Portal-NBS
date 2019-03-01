@@ -19,6 +19,7 @@ services:
       - ./data:/iqvoc/data
       - ./app:/iqvoc/app
       - ./lib:/iqvoc/lib
+      - ./db:/iqvoc/db
       - ./entrypoint.sh:/iqvoc/entrypoint.sh
       - ./config/locales:/iqvoc/config/locales
       - ./config/routes.rb:/iqvoc/config/routes.rb

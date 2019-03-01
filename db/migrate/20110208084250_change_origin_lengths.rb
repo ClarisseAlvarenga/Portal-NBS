@@ -16,8 +16,8 @@
 
 class ChangeOriginLengths < ActiveRecord::Migration
   def self.up
-    change_column :concepts, :origin, :string, limit: 4000
-    change_column :labels, :origin, :string, limit: 4000
+    change_column :concepts, :origin, :string 
+    change_column :labels, :origin, :string 
   end
 
   def self.down
