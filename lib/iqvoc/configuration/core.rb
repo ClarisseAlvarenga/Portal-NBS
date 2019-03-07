@@ -73,6 +73,11 @@ module Iqvoc
           controller: 'search_results'
         },
         {
+          text: 'Regras Gerais',
+          href: proc { regras_gerais_path },
+          controller: 'rules'
+        },
+        {
           text: proc { t('txt.views.navigation.about') },
           href: proc { help_path },
           controller: 'pages',

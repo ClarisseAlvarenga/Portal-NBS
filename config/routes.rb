@@ -82,6 +82,7 @@ Rails.application.routes.draw do
     get 'search' => 'search_results#index', as: 'search'
 
     get 'sobre' => 'pages#help', as: 'help'
+    get 'regras-gerais' => 'rules#rules', as: 'regras_gerais'
     get 'version' => 'pages#version', as: 'version'
     get 'components' => 'pages#components', as: 'components'
 
