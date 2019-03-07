@@ -48,12 +48,10 @@ $(document).ready(function () {
         var message = encodeURIComponent(text) + " - " + encodeURIComponent(url);
         var whatsapp_url = "whatsapp://send?text=" + message;
         window.location.href = whatsapp_url; */
-        console.log('entrou');
         var buttom = document.getElementById("whatsappweb");
         buttom.style.display = "none";
 
     } else {
-        console.log('entrou');
         var buttom = document.getElementById("whatsappmobile");
         buttom.style.display = "none";
 /*             alert("Please share this article in mobile device");
