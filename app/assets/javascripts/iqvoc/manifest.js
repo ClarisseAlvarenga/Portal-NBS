@@ -14,4 +14,5 @@
 //= require iqvoc/share_message_generator
 //= require iqvoc/share_results_generator
 //= require iqvoc/iconSearch
+//= require iqvoc/tooltip
 
