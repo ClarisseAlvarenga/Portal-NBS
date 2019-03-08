@@ -7,6 +7,7 @@
               end %>
   <% notes = object.notes_for_class(klass) %>
   <h2><%= klass.model_name.human(:count => notes.count) %>
+      <div class="tooltip" data-tooltip="A classificação dos serviços na NBS rege-se pelas Regras Gerais para Interpretação da Nomenclatura Brasileiras de Serviços, Intangíveis e Outras Operações que Produzam Variações no Patrimônio (RGS), disponíveis nesta página.">?</div>
     <div class="icon-bar">
       <a id="share_email" class="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
       <a id="share_twitter" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a> 
