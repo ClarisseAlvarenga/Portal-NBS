@@ -16,11 +16,16 @@
       <br>
       <br>
       <% if @concept.notes.first %>
-        <h2 class="modal-title"> Nota Explicativa</h2>
-        <div class="modal-body concept-teaser-body">
-            <br>
-            <p id="notaExplicativa" style="word-break: unset; white-space:pre-wrap"><%= @concept.notes.first %></p>
-        </div>
+        <% if @concept.notes.first.value.include?("Notas\n\n") %>    
+          <h2 class="modal-title"> Notas </h2>
+          <% @concept.notes.first.value["Notas\n\n"] = " "%>
+        <% else %>
+          <h2 class="modal-title"> Nota Explicativa</h2>
+        <% end %>
+          <div class="modal-body concept-teaser-body">
+              <br>
+              <p id="notaExplicativa" style="word-break: unset; white-space:pre-wrap"><%= @concept.notes.first.value %></p>
+          </div>
       <% end %>
 
       </div>
