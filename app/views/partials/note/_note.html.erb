@@ -1,5 +1,8 @@
 <% unless note.new_record? %>
   <div class="translation" lang="<%= note.language %>">
+      <% if note.value.include?("[Considerações Gerais]") %>              
+        <% note.value["[Considerações Gerais]"] = "<strong>Considerações Gerais</strong>"%>
+      <% end %>
       <% if note.value %>
         <p id="notaExplicativa" style="word-break: unset; white-space:pre-wrap"><%= auto_link(note.value, :html => { :target => '_blank' }) %></p>
       <% end %>

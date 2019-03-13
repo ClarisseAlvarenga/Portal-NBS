@@ -6,7 +6,13 @@
                 label
               end %>
   <% notes = object.notes_for_class(klass) %>
-  <h2><%= klass.model_name.human(:count => notes.count) %>
+  <h2>
+   <% if notes.first.value.include?("[Notas]") %>    
+          Notas 
+          <% notes.first.value["[Notas]"] = " "%>
+        <% else %>
+          Nota Explicativa
+        <% end %>
     <i rel="tooltip" class="fa fa-info-circle" alt="A classificação dos serviços na NBS rege-se pelas Regras Gerais para Interpretação da Nomenclatura<br> Brasileiras de Serviços, Intangíveis e Outras Operações que Produzam Variações no Patrimônio (RGS), disponíveis <em><a href=&quot;/pt/regras-gerais&quot;>aqui</a>.</em>"></i>
     <div class="icon-bar">
       <a id="share_email" class="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
