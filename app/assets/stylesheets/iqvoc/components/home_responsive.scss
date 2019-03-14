@@ -26,5 +26,14 @@
     .onebox {
         padding-top: 160px;
     }
+
+    .well-mobile {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        justify-content: space-around;
+        min-height: 150px;
+        align-items: center;
+    }
     
 }
