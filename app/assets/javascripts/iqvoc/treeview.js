@@ -251,8 +251,17 @@ function Treeview(container) {
       $.get(target, function(data) {
         modal.html(data);
         // modal.modal();
+        
+        var adjust;
 
-        var glanceTopPosition = jQuery('.onebox').offset().top + 100;
+        if (window.matchMedia('(max-width: 700px)').matches) {
+          adjust = jQuery('.navbar-header').height() + 50;
+          
+        } else {
+          adjust = 100;
+        }
+
+        var glanceTopPosition = jQuery('.glance-div').offset().top - adjust;
 	
         // Scroll down to 'concept-teaser-title'
         jQuery('html, body').animate({scrollTop:glanceTopPosition}, 'slow');
