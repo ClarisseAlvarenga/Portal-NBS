@@ -35,5 +35,15 @@
         min-height: 150px;
         align-items: center;
     }
-    
+
+    .modal-header {
+        padding: 1em;
+    }
+
+    .concept-teaser-body {
+        padding: 0;
+    }
+    .modal-dialog {
+        margin: unset;
+    }
 }
