@@ -1240,6 +1240,8 @@ const nbsMapping = {
 }
 
 function insereNbsLinks(pElement) {
+    pElement = document.getElementById("notaExplicativa")
+
     if (pElement) {
         
         var str = pElement.innerHTML;
@@ -1266,6 +1268,6 @@ function insereNbsLinks(pElement) {
     }
 };
 
-$(document).ready(
-    insereNbsLinks(document.getElementById("notaExplicativa"))
-);
+$(document).ready(function() {
+    insereNbsLinks();
+});
