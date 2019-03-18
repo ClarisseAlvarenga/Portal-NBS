@@ -40,6 +40,7 @@ function Treeview(container) {
       autoEscape: false,
       selectable: false,
       useContextMenu: false,
+      autoOpen: 0,
       closedIcon: $('<i class="fa fa-plus-square-o"></i>'),
       openedIcon: $('<i class="fa fa-minus-square-o"></i>'),
       data: data,
