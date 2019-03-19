@@ -49,7 +49,7 @@ function Treeview(container) {
         return uri.normalize().toString();
       },
       onCreateLi: function(node, $li) {
-        var link = buildLink(node.glance_url, node.name);
+        var link = buildLink(node.glance_url, node.name, $li);
         $li.find('.jqtree-title').replaceWith(link);
 
         // add aditional info if present (e.g. for collections)
@@ -230,12 +230,13 @@ function Treeview(container) {
 
   var selectedLink;
 
-  function buildLink(url, label) {
+  function buildLink(url, label, li) {
     var link = $('<a/>')
 
     link.attr('href', url)
         .addClass('tree-element-link')
         .html(label);
+
 
     link.click(function(ev) {
       ev.preventDefault();
@@ -268,6 +269,9 @@ function Treeview(container) {
         jQuery('html, body').animate({scrollTop:glanceTopPosition}, 'slow');
 
       });
+      if (li.find('.jqtree-toggler')[0]) { 
+        li.find('.jqtree-toggler')[0].click();
+      }
     });
 
     return link;
