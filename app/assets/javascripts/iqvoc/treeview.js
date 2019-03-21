@@ -49,7 +49,7 @@ function Treeview(container) {
         return uri.normalize().toString();
       },
       onCreateLi: function(node, $li) {
-        var link = buildLink(node.glance_url, node.name, $li);
+        var link = buildLink($li, node);
         $li.find('.jqtree-title').replaceWith(link);
 
         // add aditional info if present (e.g. for collections)
@@ -81,7 +81,7 @@ function Treeview(container) {
           }
 
           if (node && !node.locked) {
-            // add icon only to the first element of the collection.
+            // add icon only to the first element of the collection.li
             // the second one could be a nodelist for parents nodes.
             $li.find('.jqtree-element').append(' <i class="fa fa-arrows"/>');
           }
@@ -230,22 +230,24 @@ function Treeview(container) {
 
   var selectedLink;
 
-  function buildLink(url, label, li) {
+  function buildLink(li, node) {
     var link = $('<a/>')
+
+    var url = node.glance_url;
+    var label =  node.name; 
 
     link.attr('href', url)
         .addClass('tree-element-link')
         .html(label);
 
+    if (selectedLink && link[0].href == selectedLink.href) {
+      beRed(link[0]);
+    }
 
     link.click(function(ev) {
       ev.preventDefault();
 
-      this.style.color = "red";
-      if (selectedLink && this != selectedLink) {
-        selectedLink.style.color = "#337ab7";
-      }
-      selectedLink = this;
+      beRed(this);
 
       var modal = $("#concept-teaser-modal");
       var target = $(this).attr("href");
@@ -301,6 +303,14 @@ function Treeview(container) {
     });
 
     return teaserLink;
+  }
+
+  function beRed(link){
+    link.style.color = "red";
+      if (selectedLink && link != selectedLink) {
+        selectedLink.style.color = "#337ab7";
+      }
+      selectedLink = link;
   }
 
 }
