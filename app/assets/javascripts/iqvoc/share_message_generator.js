@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    var URL = document.URL;
+    var URL = encodeURIComponent(document.URL);
 
     var email_link = document.getElementById("share_email");
     var twitter_link = document.getElementById("share_twitter");
