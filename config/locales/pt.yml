@@ -170,7 +170,7 @@ pt:
        quick_search: "Consulta rápida"
        help: "Ajuda"
      frontpage:
-       type_to_browse: "Começe digitando para navegar na Nomeclatura"
+       type_to_browse: "Começe digitando para navegar na Nomenclatura"
      search_results:
        header: "Busca"
        inflectionals: "flexões"
