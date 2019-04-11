@@ -70,9 +70,12 @@ $( function()
                 });
                 
                 target.attr( 'alt', tip );
+                target.off( 'click', remove_tooltip );
+
             };
             
             //target.bind( 'mouseleave', remove_tooltip );
+            target.bind( 'click', remove_tooltip );
             tooltip.bind( 'click', remove_tooltip );
         }
     });
