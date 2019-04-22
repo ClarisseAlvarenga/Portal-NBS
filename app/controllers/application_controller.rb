@@ -25,7 +25,9 @@ class ApplicationController < ActionController::Base
   private
   def remove_www_subdomain
     if /^www/.match(request.host)
-      redirect_to("#{request.host_with_port}",status: 301)
+      host =  request.host_with_port
+      host.slice! "www."
+      redirect_to("#{request.protocol}#{host}",status: 302)
     end
   end
 end
