@@ -6,7 +6,7 @@
                 label
               end %>
   <% notes = object.notes_for_class(klass) %>
-  <h2>
+  <h2 id="local">
   <% if @concept.notes.first %>
    <% if notes.first.value.include?("[Notas]") %>    
           Notas 
@@ -15,7 +15,9 @@
           Nota Explicativa
         <% end %>
   <% end %>
-    <i rel="tooltip" class="fa fa-info-circle" alt="A classificação dos serviços na NBS rege-se pelas Regras Gerais para Interpretação da Nomenclatura<br> Brasileiras de Serviços, Intangíveis e Outras Operações que Produzam Variações no Patrimônio (RGS), disponíveis <em><a href=&quot;/pt/regras-gerais&quot;>aqui</a>.</em>"></i>
+    <a href="javascript:void(0)">
+      <i rel="tooltip" class="fa fa-info-circle" alt="A classificação dos serviços na NBS rege-se pelas Regras Gerais para Interpretação da Nomenclatura<br> Brasileiras de Serviços, Intangíveis e Outras Operações que Produzam Variações no Patrimônio (RGS), disponíveis <em><a href=&quot;/pt/regras-gerais&quot;>aqui</a>.</em>"></i>
+    </a>
     <div class="icon-bar" style="width: 150px">
       <a id="share_email" class="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
       <a id="share_twitter" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a> 
