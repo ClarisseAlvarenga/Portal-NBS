@@ -16,6 +16,18 @@
 
 class ApplicationController < ActionController::Base
   include ControllerExtensions
-
+  
   protect_from_forgery
+  
+  before_filter :remove_www_subdomain
+  
+
+  private
+  def remove_www_subdomain
+    if /^www/.match(request.host)
+      host =  request.host_with_port
+      host.slice! "www."
+      redirect_to("#{request.protocol}#{host}",status: 302)
+    end
+  end
 end
