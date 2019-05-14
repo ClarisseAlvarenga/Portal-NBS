@@ -1,4 +1,6 @@
-<%= content_tag :div, :class => "relation translation panel" do %>
+<%
+=begin%>
+ <%= content_tag :div, :class => "relation translation panel" do %>
   <% if defined?(concept) %>
     <h2><%= klass.model_name.human(:count => 2) %></h2>
     <div class="relation-body">
@@ -12,7 +14,9 @@
             end %>
         </div>
 
-    </div>
+    </div> 
+<%
+=end%>
 
   <%
 =begin%>
@@ -29,5 +33,9 @@
     </div>
 <%
 =end%>
-  <% end %> 
-<% end %>
+  <%
+=begin%>
+ <% end %> 
+<% end %> 
+<%
+=end%>

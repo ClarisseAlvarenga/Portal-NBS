@@ -6,7 +6,9 @@
       <br>
       <% if @view.alt_labels.any? %>
       <div>
-        <h2><%= Iqvoc::Concept.alt_labeling_class.model_name.human(count: 2) %></h2>
+        <%
+=begin%>
+ <h2><%= Iqvoc::Concept.alt_labeling_class.model_name.human(count: 2) %></h2>
         <ul class="label-list">
           <% @view.alt_labels.each do |l| %><!--
           --><li class="label-list-item">
@@ -14,7 +16,9 @@
              </li><!--
           --><% end %>
       <br>
-      <br>
+      <br> 
+<%
+=end%>
       <% if @concept.notes.first %>
         <% if @concept.notes.first.value.include?("[Notas]") %>    
           <h2 class="modal-title"> Notas </h2>
