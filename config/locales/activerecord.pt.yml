@@ -31,13 +31,13 @@ pt:
         other: "Relações"
       concept/relation/skos/broader/mono:
         one:   "Termo geral"
-        other: "Conceitos gerais"
+        other: "É desdobramento de:"
       concept/relation/skos/broader/poly:
         one:   "Termo geral"
-        other: "Conceitos gerais"
+        other: "É desdobramento de:"
       concept/relation/skos/narrower/base:
         one:   "Termo específico"
-        other: "Conceitos específicos"
+        other: "Desdobra-se em:"
       concept/relation/skos/related:
         one:   "Termo relacionado"
         other: "Termos relacionados"
@@ -120,7 +120,7 @@ pt:
       concept/base:
         follow_up: "Lembrete"
         expired_at: "Expirado em"
-        top_term: "Termo principal"
+        top_term: "NBS"
       label/base:
         follow_up: "Lembrete"
         expired_at: "Expirado em"

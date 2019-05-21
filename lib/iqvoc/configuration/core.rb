@@ -97,7 +97,28 @@ module Iqvoc
           #   text: proc { t('txt.views.navigation.version') },
           #   href: proc { version_path }
           # }]
-        }]
+        },
+        {
+          text: proc { t('txt.views.navigation.whole_nbs') },
+          items: [
+            {
+              text: "NBS 2.0",
+              href: 'http://www.mdic.gov.br/images/REPOSITORIO/scs/decos/NBS/Anexo_I_NBS_2.0_com_altera%C3%A7%C3%B5es_6.12.18.pdf'
+            },
+            {
+              text: "NEBS 2.0",
+              href: 'http://www.mdic.gov.br/images/REPOSITORIO/scs/decos/NBS/Anexo_II_NEBS_2.0_com_altera%C3%A7%C3%B5es_6.12.18.pdf'
+            },
+            {
+              text: "Tabela em csv",
+              href: 'http://www.mdic.gov.br/images/REPOSITORIO/scs/decos/NBS/NBS_2-0.csv'
+            }
+          ]
+        }
+      
+      ]
+
+        
 
         self.searchable_class_names = {
           # 'Labeling::SKOS::Base' => 'labels',
